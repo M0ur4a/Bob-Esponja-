@@ -7,31 +7,30 @@
 
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #00aaff; /* Azul do mar */
+    background-color: #00bfff;
     color: #333;
     line-height: 1.6;
-    padding: 20px;
 }
 
+/* Cabeçalho */
 header {
-    background: #ffec00; /* Amarelo Bob Esponja */
+    background: #ffec00;
     padding: 20px;
-    border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #ff6f00;
 }
 
 header h1 {
-    color: #005f99;
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    color: #005f99;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    margin-top: 10px;
+    gap: 20px;
 }
 
 nav a {
@@ -45,87 +44,116 @@ nav a:hover {
     color: #ff6f00;
 }
 
+/* Seções */
 section {
+    max-width: 900px;
+    margin: 30px auto;
     background: #fff8a6;
-    margin: 20px auto;
     padding: 20px;
-    border-radius: 15px;
-    max-width: 800px;
-    box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 section h2 {
+    text-align: center;
     color: #ff6f00;
     margin-bottom: 15px;
-    text-align: center;
 }
 
-section p {
+section p, section ul {
     font-size: 1.1rem;
-    text-align: justify;
+    margin-bottom: 15px;
 }
 
 section img {
     display: block;
     margin: 15px auto;
-    max-width: 200px;
-    border-radius: 15px;
-    border: 5px solid #ffec00;
+    ;
 }
 
-.personagens-lista {
-    list-style-type: square;
+/* Lista de curiosidades */
+#curiosidades ul {
+    list-style: disc;
     padding-left: 20px;
-    font-size: 1.1rem;
 }
 
-form label {
-    font-weight: bold;
-    margin-top: 10px;
-    display: block;
+/* Cards de personagens */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0.2);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 10px;
+}
+
+.card h3 {
+    color: #005f99;
+    margin: 10px 0;
+}
+
+/* Galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.galeria img {
     width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    border: 2px solid #ffec00;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+    border-radius: 12px;
+    border: 3px solid #ffec00;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    border-color: #ff6f00;
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ffec00;
+}
+
+input:focus, textarea:focus {
     outline: none;
+    border-color: #ff6f00;
 }
 
 button {
-    margin-top: 15px;
+    padding: 10px;
     background-color: #ffec00;
     border: none;
-    padding: 12px 25px;
-    font-size: 1.1rem;
     font-weight: bold;
     color: #005f99;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 button:hover {
     background-color: #ff6f00;
-    color: #fff;
+    color: white;
 }
 
+/* Rodapé */
 footer {
     text-align: center;
-    margin-top: 30px;
+    padding: 15px;
     color: #ffec00;
-    font-weight: bold;
-    text-shadow: 0 0 5px #005f99;
+    text-shadow: 1px 1px 2px #005f99;
 }
